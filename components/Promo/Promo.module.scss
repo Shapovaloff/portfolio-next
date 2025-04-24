@@ -1,0 +1,158 @@
+@use "styles/mixins" as m;
+@use "styles/text-mixins" as t;
+
+.promo {
+  height: calc(100vh - 80px);
+  min-height: 650px;
+  max-height: 900px;
+
+  @include m.vp--1279 {
+    min-height: 640px;
+    max-height: 700px;
+  }
+
+  @include m.vp--767 {
+    min-height: auto;
+    max-height: 100%;
+    height: auto;
+  }
+
+  &__container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 80px;
+    padding-bottom: 200px;
+    gap: 40px;
+
+    @include m.vp--1023 {
+      justify-content: flex-start;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    @include m.vp--767 {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    @include t.title-h3;
+
+    & span {
+      color: var(--c-primary-500);
+    }
+  }
+
+  &__title {
+    @include t.title-h1;
+  }
+
+  &__img-block {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    width: 770px;
+    height: auto;
+    color: var(--bg-color-footer);
+
+    & svg {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @include m.vp--1279 {
+      width: 650px;
+    }
+
+    @include m.vp--1023 {
+      bottom: 60px;
+    }
+
+    @include m.vp--767 {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 48px;
+    }
+  }
+
+  &__button {
+    margin: 32px 0 0;
+
+    @include m.vp--767 {
+      width: 100%;
+      margin: 24px 0 0;
+      justify-content: center;
+    }
+  }
+
+  &__animate {
+    &--circle {
+      fill: var(--a-color-gray);
+    }
+
+    &--path {
+      opacity: 0;
+    }
+  }
+}
+
+[data-theme="dark"] .promo__animate {
+  &--circle,
+  &--path {
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-delay: 0.15s;
+  }
+
+  &--circle {
+    fill: var(--a-color-gray);
+    animation-name: animate-lamp;
+  }
+
+  &--path {
+    opacity: 0;
+    animation-name: animate-lamp-line;
+  }
+}
+
+@keyframes animate-lamp-line {
+  0%,
+  20%,
+  40%,
+  100% {
+    opacity: 1;
+  }
+
+  10%,
+  30%,
+  80% {
+    opacity: 0;
+  }
+}
+@keyframes animate-lamp {
+  0%,
+  20%,
+  40%,
+  100% {
+    fill: var(--a-color-yellow);
+  }
+
+  10%,
+  30%,
+  80% {
+    fill: var(--a-color-gray);
+  }
+}

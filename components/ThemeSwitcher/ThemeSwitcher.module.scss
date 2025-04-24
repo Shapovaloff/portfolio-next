@@ -1,0 +1,89 @@
+@use "styles/mixins" as m;
+
+.theme-switcher {
+  @include m.reset-btn;
+  position: relative;
+  background-color: rgba(var(--c-rgb-primary-400), 0.4);
+  border-radius: var(--border-radius);
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s;
+
+  &__toggle {
+    width: 68px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--c-primary-500);
+    border-radius: var(--border-radius);
+    padding: 4px;
+    color: var(--c-dark-50);
+    cursor: pointer;
+    transition: border-color 0.2s;
+    -webkit-tap-highlight-color: var(--c-transparent);
+    -webkit-tap-highlight-color: transparent;
+
+    @include m.vp--767 {
+      width: 60px;
+      height: 30px;
+      padding: 2px;
+    }
+
+    & svg {
+      width: 24px;
+      height: 24px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: var(--border-radius);
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 36px;
+      background-color: var(--c-primary-500);
+      pointer-events: none;
+      transition:
+        transform 0.3s,
+        background-color 0.2s;
+
+      @include m.vp--767 {
+        width: 32px;
+      }
+    }
+  }
+
+  & input:checked + .theme-switcher__toggle::after {
+    transform: translateX(32px);
+
+    @include m.vp--767 {
+      transform: translateX(28px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &:hover {
+      .theme-switcher__toggle {
+        border-color: var(--c-primary-600);
+
+        &::after {
+          background-color: var(--c-primary-600);
+        }
+      }
+    }
+  }
+}
+
+[data-theme="dark"] .theme-switcher {
+  .theme-switcher__toggle::after {
+    transform: translateX(32px);
+
+    @include m.vp--767 {
+      transform: translateX(28px);
+    }
+  }
+}
