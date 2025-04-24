@@ -6,6 +6,7 @@ import LastWorks from '@/components/LastWorks/LastWorks';
 import Layout from '@/components/Layout/Layout';
 import Promo from '@/components/Promo/Promo';
 import Sprite from '@/components/Sprite/Sprite';
+import Technologies from '@/components/Technologies/Technologies';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <Advantages />
           <About />
           <LastWorks />
+          <Technologies />
         </main>
         <Footer />
       </Layout>
