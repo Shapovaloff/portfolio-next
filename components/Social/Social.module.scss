@@ -1,0 +1,73 @@
+@use "styles/mixins" as m;
+@use "styles/text-mixins" as t;
+
+.social {
+  @include m.reset-list;
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--c-dark-200);
+    transition: all var(--trans--300);
+    color: var(--text-color-gray-light);
+
+    & svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (min-width: 1024px) {
+      --icon-bg-color: var(--c-dark-400);
+
+      &:hover {
+        &:hover {
+          color: var(--c-white);
+          background: var(--icon-bg-color);
+        }
+      }
+    }
+  }
+}
+
+// Todo
+// [data-theme="dark"] .social {
+//   &__link {
+//     border-color: transparent;
+//     background-color: $color-dark-700;
+
+//     @media (min-width: 1024px) {
+//       &:hover {
+//         background: $color-white;
+//       }
+//       &--tg:hover {
+//         color: $tg;
+//       }
+//       &--fb:hover {
+//         color: $fb;
+//       }
+//       &--inst:hover {
+//         color: $inst;
+//       }
+//       &--inst:hover path {
+//         fill: url(#paint0_radial);
+//       }
+//       &--vk:hover {
+//         color: $vk;
+//       }
+//       &--github:hover {
+//         color: $github;
+//       }
+//     }
+//   }
+// }

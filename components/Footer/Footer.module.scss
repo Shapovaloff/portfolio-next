@@ -1,0 +1,34 @@
+@use "styles/mixins" as m;
+@use "styles/text-mixins" as t;
+
+.footer {
+  margin-top: 40px;
+  background-color: var(--bg-color-footer);
+  border-top: 2px solid var(--c-border-blue);
+
+  @include m.vp--767 {
+    margin-top: 0;
+  }
+
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include m.vp--767 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    color: var(--text-color-gray-light);
+
+    @include m.vp--767 {
+      margin-top: 16px;
+    }
+  }
+}
