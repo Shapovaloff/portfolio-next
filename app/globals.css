@@ -22,7 +22,7 @@
   --c-primary-600: #4f46e5;
 
   /* color rgba */
-  --c-rgb-primary-200: 229, 231, 235;
+  --c-rgb-primary-200-03: rgba(199, 210, 254, 0.3);
   --c-rgb-primary-300: 166, 180, 252;
   --c-rgb-primary-400: 130, 141, 248;
 

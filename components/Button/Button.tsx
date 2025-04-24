@@ -7,12 +7,13 @@ function Button({
   className = '',
   type = 'button',
   variant = 'default',
+  href = '',
   ...props
 }: ButtonProps | LinkProps): JSX.Element {
   const baseClasses = `${styles['button']} ${styles[variant]} ${className}`;
 
-  if (type === 'link') {
-    const { href, ...rest } = props as LinkProps;
+  if (type === 'link' || href) {
+    const { ...rest } = props as LinkProps;
     return (
       <a href={href} className={`${baseClasses} `} {...rest}>
         {children}

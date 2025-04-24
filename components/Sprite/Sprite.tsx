@@ -764,7 +764,7 @@ function Sprite() {
             ></path>
           </g>
         </symbol>
-        <symbol id="icon-layout-grid" viewBox="0 0 24 24">
+        <symbol id="icon-layout-tile" viewBox="0 0 24 24">
           <g fill="none">
             <path
               opacity="0.3"
@@ -779,7 +779,7 @@ function Sprite() {
             ></path>
           </g>
         </symbol>
-        <symbol id="icon-layout-horizontal" viewBox="0 0 24 24">
+        <symbol id="icon-layout-compact" viewBox="0 0 24 24">
           <g fill="none">
             <path
               fillRule="evenodd"

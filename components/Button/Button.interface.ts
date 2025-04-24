@@ -14,6 +14,7 @@ export interface ButtonBase {
   className?: string;
   type?: ButtonType;
   variant?: ButtonVariant;
+  href?: string;
 }
 
 export type ButtonProps = ButtonBase & ButtonHTMLAttributes<HTMLButtonElement>;

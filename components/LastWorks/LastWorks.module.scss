@@ -1,0 +1,70 @@
+@use "styles/mixins" as m;
+@use "styles/text-mixins" as t;
+
+.last-works {
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include t.title-h2;
+  }
+
+  &__nav {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+
+    @include m.vp--767 {
+      margin-top: 16px;
+    }
+
+    @include m.vp--767 {
+      margin-top: 16px;
+    }
+  }
+
+  &__card-view {
+    display: flex;
+    align-items: center;
+
+    @include m.vp--767 {
+      display: none;
+    }
+  }
+
+  &__control {
+    padding: 6px;
+    color: var(--text-color-gray-light);
+
+    &:not(:first-child) {
+      margin-left: 8px;
+    }
+
+    &.active {
+      opacity: 1;
+      color: var(--c-primary-500);
+      background-color: var(--c-card);
+      border-radius: 8px;
+    }
+
+    @media (min-width: 1024px) {
+      &:hover {
+        color: var(--c-primary-500);
+      }
+    }
+  }
+
+  &__link {
+    margin: 60px auto 0;
+
+    @include m.vp--767 {
+      margin: 40px auto 0;
+    }
+  }
+}

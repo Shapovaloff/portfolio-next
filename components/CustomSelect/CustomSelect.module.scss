@@ -1,0 +1,158 @@
+@use "styles/mixins" as m;
+@use "styles/text-mixins" as t;
+
+.custom-select {
+  position: relative;
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    display: none;
+    transform: translateY(-50%);
+    transition:
+      transform var(--trans--300),
+      opacity var(--trans--300);
+    pointer-events: none;
+  }
+
+  &__button {
+    @include m.reset-btn;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    max-height: 42px;
+    padding: 0 8px 0 16px;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 48px;
+
+    outline: none;
+    cursor: pointer;
+    transition:
+      border 0.2s,
+      color 0.2s;
+    text-align: left;
+    overflow: hidden;
+
+    &:hover {
+      border-color: var(--c-primary-500);
+      color: var(--c-primary-500);
+    }
+
+    @include m.vp--767 {
+      font-weight: 400;
+    }
+  }
+
+  &__list {
+    @include m.reset-list;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+    min-width: 100%;
+    width: auto;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border: 1px solid var(--border-transparent);
+    background-color: var(--bg-color);
+    transform: translateY(108%);
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 8px 24px rgba(67, 112, 88, 0.3);
+
+    transition:
+      visibility 0.3s,
+      opacity 0.3s;
+  }
+
+  &__item {
+    padding: 8px 16px;
+    outline: none;
+    cursor: pointer;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+    white-space: nowrap;
+
+    &:first-child {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    &[aria-selected="true"] {
+      background-color: var(--c-primary-500);
+      color: var(--c-white);
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          background-color: var(--c-primary-500);
+          color: var(--c-white);
+        }
+      }
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: var(--c-primary-500);
+        color: var(--c-white);
+      }
+    }
+  }
+
+  &__text {
+    overflow: hidden;
+    max-width: 100%;
+    text-align: left;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    margin-right: 4px;
+    transition: opacity var(--trans--300) 0.1s;
+  }
+
+  &__icon {
+    flex-shrink: 1;
+    width: 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & svg {
+      transition: transform 0.2s;
+    }
+  }
+
+  &.is-open {
+    .custom-select__list {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+
+    .custom-select__icon svg {
+      transform: rotate(180deg);
+    }
+
+    .custom-select__label {
+      opacity: 0;
+    }
+  }
+}
