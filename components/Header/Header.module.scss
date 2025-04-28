@@ -13,32 +13,32 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 2px;
+    height: 2rem;
     width: 100%;
     background-color: var(--c-border-blue);
   }
 
   &__container {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 16rem;
+    padding-bottom: 16rem;
     display: flex;
     align-items: center;
 
     @include m.vp--1023 {
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-top: 16rem;
+      padding-bottom: 16rem;
     }
 
     @include m.vp--767 {
-      padding-top: 12px;
-      padding-bottom: 12px;
+      padding-top: 12rem;
+      padding-bottom: 12rem;
     }
   }
 
   &__logo {
     color: var(--c-primary-500);
-    width: 48px;
-    height: 48px;
+    width: 48rem;
+    height: 48rem;
     margin-right: auto;
 
     & svg {
@@ -48,17 +48,17 @@
     }
 
     @include m.vp--767 {
-      width: 40px;
-      height: 40px;
+      width: 40rem;
+      height: 40rem;
     }
   }
 
   &__btn-menu {
     @include m.reset-btn;
     position: relative;
-    width: 32px;
-    height: 32px;
-    margin-left: 24px;
+    width: 32rem;
+    height: 32rem;
+    margin-left: 24rem;
     display: none;
     align-items: center;
     justify-content: center;
@@ -72,18 +72,18 @@
 
     & span {
       content: "";
-      width: 30px;
-      height: 4px;
-      border-radius: 4px;
+      width: 30rem;
+      height: 4rem;
+      border-radius: 4rem;
       display: block;
       background-color: var(--c-primary-500);
-      margin-bottom: 7px;
+      margin-bottom: 7rem;
       transition: 0.2s;
 
       &:last-child {
         margin-bottom: 0;
-        width: 22px;
-        margin-left: 8px;
+        width: 22rem;
+        margin-left: 8rem;
         opacity: 0.3;
       }
     }
@@ -92,13 +92,13 @@
       & span {
         transform: rotate(-45deg);
         margin: 0;
-        width: 30px;
+        width: 30rem;
 
         &:last-child {
           transform: rotate(45deg);
-          width: 30px;
+          width: 30rem;
           margin: 0;
-          margin-top: -4px;
+          margin-top: -4rem;
         }
       }
     }

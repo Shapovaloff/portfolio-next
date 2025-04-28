@@ -2,13 +2,13 @@
 @use "styles/text-mixins" as t;
 
 .promo {
-  height: calc(100vh - 80px);
-  min-height: 650px;
-  max-height: 900px;
+  height: calc(100vh - 80rem);
+  min-height: 650rem;
+  max-height: 900rem;
 
   @include m.vp--1279 {
-    min-height: 640px;
-    max-height: 700px;
+    min-height: 640rem;
+    max-height: 700rem;
   }
 
   @include m.vp--767 {
@@ -24,19 +24,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 80px;
-    padding-bottom: 200px;
-    gap: 40px;
+    padding-top: 80rem;
+    padding-bottom: 200rem;
+    gap: 40rem;
 
     @include m.vp--1023 {
       justify-content: flex-start;
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding-top: 60rem;
+      padding-bottom: 60rem;
     }
 
     @include m.vp--767 {
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding-top: 60rem;
+      padding-bottom: 60rem;
     }
   }
 
@@ -60,8 +60,8 @@
   &__img-block {
     position: absolute;
     right: 0;
-    bottom: 100px;
-    width: 770px;
+    bottom: 100rem;
+    width: 770rem;
     height: auto;
     color: var(--bg-color-footer);
 
@@ -73,27 +73,27 @@
     }
 
     @include m.vp--1279 {
-      width: 650px;
+      width: 650rem;
     }
 
     @include m.vp--1023 {
-      bottom: 60px;
+      bottom: 60rem;
     }
 
     @include m.vp--767 {
       position: relative;
       bottom: 0;
       width: 100%;
-      margin-top: 48px;
+      margin-top: 48rem;
     }
   }
 
   &__button {
-    margin: 32px 0 0;
+    margin: 32rem 0 0;
 
     @include m.vp--767 {
       width: 100%;
-      margin: 24px 0 0;
+      margin: 24rem 0 0;
       justify-content: center;
     }
   }

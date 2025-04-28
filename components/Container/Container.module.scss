@@ -2,36 +2,18 @@
 
 .container {
   width: 100%;
-  max-width: 1282px;
+  max-width: 1282rem;
   margin: 0 auto;
-  padding: 0 32px;
+  padding-right: 32rem;
+  padding-left: 32rem;
 
   @include m.vp--1023 {
-    padding: 0 24px;
+    padding-right: 24rem;
+    padding-left: 24rem;
   }
 
   @include m.vp--767 {
-    padding: 0 16px;
+    padding-right: 16rem;
+    padding-left: 16rem;
   }
 }
-
-// .container {
-//   width: 100%;
-//   max-width: 1282px;
-//   margin: 0 auto;
-//   padding: 80px 32px;
-
-//   @include m.vp--1023 {
-//     padding: 64px 24px;
-//   }
-
-//   @include m.vp--767 {
-//     padding: 40px 16px;
-//   }
-
-//   &--no-padding {
-//     @include m.vp--767 {
-//       padding: 0;
-//     }
-//   }
-// }

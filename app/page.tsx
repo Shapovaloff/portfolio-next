@@ -1,5 +1,6 @@
 import About from '@/components/About/About';
 import Advantages from '@/components/Advantages/Advantages';
+import Career from '@/components/Career/Career';
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import LastWorks from '@/components/LastWorks/LastWorks';
@@ -19,6 +20,7 @@ export default function Home() {
           <Advantages />
           <About />
           <LastWorks />
+          <Career />
           <Technologies />
         </main>
         <Footer />

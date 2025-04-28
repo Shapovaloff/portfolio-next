@@ -56,7 +56,7 @@ export const worksList: WorkItem[] = [
   {
     category: 'real',
     title: 'Остров фортов',
-    description: 'Билеты на метеоры в&nbsp;Кронштадт до Острова Фортов',
+    description: 'Билеты на метеоры в\u00A0Кронштадт до Острова Фортов',
     linkSite: 'https://ostrovfortov.com',
     name: 'ostrovfortov',
   },
@@ -71,23 +71,22 @@ export const worksList: WorkItem[] = [
     category: 'real',
     title: 'Retail Rocket',
     description:
-      'Помогает трансформировать новых покупателей в&nbsp;постоянных и&nbsp;работать над&nbsp;их&nbsp;удержанием',
+      'Помогает трансформировать новых покупателей в\u00A0постоянных и\u00A0работать над\u00A0их\u00A0удержанием',
     linkSite: 'https://retailrocket.ru/',
     name: 'retailrocket',
   },
-
-  {
-    category: 'educational',
-    title: 'Next pizza',
-    description: 'Учебный проект Next + React',
-    linkSite: 'https://next-pizza-red-gamma.vercel.app/',
-    name: 'next-pizza',
-  },
+  // {
+  //   category: 'educational',
+  //   title: 'Next pizza',
+  //   description: 'Учебный проект Next + React',
+  //   linkSite: 'https://next-pizza-red-gamma.vercel.app/',
+  //   name: 'next-pizza',
+  // },
   {
     category: 'educational',
     title: 'Israel',
     description:
-      'Учебный проект практического курса "Акселератор" от&nbsp;HTML Academy',
+      'Учебный проект практического курса "Акселератор" от\u00A0HTML Academy',
     linkSite: 'https://shapovaloff.github.io/israel/build/',
     name: 'israel',
   },
@@ -95,7 +94,7 @@ export const worksList: WorkItem[] = [
     category: 'educational',
     title: 'Escape room',
     description:
-      'Учебный проект практического курса "Акселератор" от&nbsp;HTML Academy',
+      'Учебный проект практического курса "Акселератор" от\u00A0HTML Academy',
     linkSite: 'https://shapovaloff.github.io/escape-room/build/main.html',
     name: 'escape-room',
   },
@@ -103,7 +102,7 @@ export const worksList: WorkItem[] = [
     category: 'educational',
     title: 'Cat energy',
     description:
-      'Учебный проект онлайн‑курсa HTML&nbsp;и&nbsp;CSS "Адаптивная вёрстка и&nbsp;автоматизация" от&nbsp;HTML Academy',
+      'Учебный проект онлайн‑курсa HTML\u00A0и\u00A0CSS "Адаптивная вёрстка и\u00A0автоматизация" от\u00A0HTML Academy',
     linkSite:
       'https://shapovaloff.github.io/1374325-cat-energy-19/build/index.html',
     name: 'cat-energy',

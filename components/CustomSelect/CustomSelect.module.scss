@@ -7,7 +7,7 @@
   &__label {
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 10rem;
     display: none;
     transform: translateY(-50%);
     transition:
@@ -21,16 +21,16 @@
     display: inline-flex;
     align-items: center;
     width: 100%;
-    max-height: 42px;
-    padding: 0 8px 0 16px;
+    max-height: 42rem;
+    padding: 0 8rem 0 16rem;
     background-color: transparent;
-    border: 1px solid var(--text-color);
+    border: 1rem solid var(--text-color);
     color: var(--text-color);
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 8rem;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 48px;
+    font-size: 16rem;
+    line-height: 48rem;
 
     outline: none;
     cursor: pointer;
@@ -58,17 +58,17 @@
     display: none;
     min-width: 100%;
     width: auto;
-    max-height: 300px;
+    max-height: 300rem;
     overflow-y: auto;
-    border-radius: 8px;
+    border-radius: 8rem;
     overflow: hidden;
-    border: 1px solid transparent;
-    border: 1px solid var(--border-transparent);
+    border: 1rem solid transparent;
+    border: 1rem solid var(--border-transparent);
     background-color: var(--bg-color);
     transform: translateY(108%);
     visibility: hidden;
     opacity: 0;
-    box-shadow: 0 8px 24px rgba(67, 112, 88, 0.3);
+    box-shadow: 0 8rem 24rem rgba(67, 112, 88, 0.3);
 
     transition:
       visibility 0.3s,
@@ -76,7 +76,7 @@
   }
 
   &__item {
-    padding: 8px 16px;
+    padding: 8rem 16rem;
     outline: none;
     cursor: pointer;
     transition:
@@ -85,13 +85,13 @@
     white-space: nowrap;
 
     &:first-child {
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
+      border-top-left-radius: 8rem;
+      border-top-right-radius: 8rem;
     }
 
     &:last-child {
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8rem;
+      border-bottom-right-radius: 8rem;
     }
 
     &[aria-selected="true"] {
@@ -123,13 +123,13 @@
     white-space: nowrap;
     display: block;
     width: 100%;
-    margin-right: 4px;
+    margin-right: 4rem;
     transition: opacity var(--trans--300) 0.1s;
   }
 
   &__icon {
     flex-shrink: 1;
-    width: 24px;
+    width: 24rem;
     height: 100%;
     display: flex;
     align-items: center;

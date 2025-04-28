@@ -3,8 +3,8 @@
 
 .last-works {
   &__container {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 80rem;
+    padding-bottom: 80rem;
     display: flex;
     flex-direction: column;
   }
@@ -14,18 +14,18 @@
   }
 
   &__nav {
-    margin-top: 32px;
+    margin-top: 32rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: left;
 
     @include m.vp--767 {
-      margin-top: 16px;
+      margin-top: 16rem;
     }
 
     @include m.vp--767 {
-      margin-top: 16px;
+      margin-top: 16rem;
     }
   }
 
@@ -39,21 +39,21 @@
   }
 
   &__control {
-    padding: 6px;
+    padding: 6rem;
     color: var(--text-color-gray-light);
 
     &:not(:first-child) {
-      margin-left: 8px;
+      margin-left: 8rem;
     }
 
     &.active {
       opacity: 1;
       color: var(--c-primary-500);
       background-color: var(--c-card);
-      border-radius: 8px;
+      border-radius: 8rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1024rem) {
       &:hover {
         color: var(--c-primary-500);
       }
@@ -61,10 +61,10 @@
   }
 
   &__link {
-    margin: 60px auto 0;
+    margin: 60rem auto 0;
 
     @include m.vp--767 {
-      margin: 40px auto 0;
+      margin: 40rem auto 0;
     }
   }
 }

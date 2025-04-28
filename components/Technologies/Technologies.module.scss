@@ -4,8 +4,8 @@
 .technologies {
   &__container {
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 80rem;
+    padding-bottom: 80rem;
   }
 
   &__title {
@@ -13,23 +13,23 @@
   }
 
   &__block-list {
-    margin-top: 40px;
+    margin-top: 40rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 48px 30px;
+    grid-gap: 48rem 30rem;
 
     @include m.vp--1279 {
       grid-template-columns: repeat(2, 1fr);
     }
 
     @include m.vp--1023 {
-      margin-top: 32px;
+      margin-top: 32rem;
       grid-template-columns: auto;
     }
 
     @include m.vp--767 {
-      margin-top: 24px;
-      grid-gap: 32px;
+      margin-top: 24rem;
+      grid-gap: 32rem;
     }
   }
 
@@ -53,20 +53,20 @@
     @include m.vp--767 {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 12px;
+      grid-gap: 12rem;
     }
   }
 
   &__item {
     position: relative;
     text-align: center;
-    margin-top: 24px;
+    margin-top: 24rem;
 
     &:not(:nth-child(4n)) {
-      margin-right: 24px;
+      margin-right: 24rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1024rem) {
       &:hover {
         & .technologies__img-block {
           color: var(--c-dark-700);
@@ -83,7 +83,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 16px;
+      margin-top: 16rem;
 
       &:not(:nth-child(4n)) {
         margin-right: 0;
@@ -92,8 +92,8 @@
   }
 
   &__img-block {
-    width: 80px;
-    height: 80px;
+    width: 80rem;
+    height: 80rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,12 +102,12 @@
     transition: background-color var(--trans--300);
 
     @include m.vp--767 {
-      width: 72px;
-      height: 72px;
+      width: 72rem;
+      height: 72rem;
 
       & img,
       & svg {
-        width: size(48px);
+        width: size(48rem);
         display: block;
         height: auto;
       }
@@ -115,12 +115,12 @@
   }
 
   &__text {
-    margin: 8px 0 0;
+    margin: 8rem 0 0;
     top: 100%;
     display: block;
     width: 100%;
     position: absolute;
-    font-size: size(14px);
+    font-size: size(14rem);
     opacity: 0;
     transition: opacity 0.2s;
     pointer-events: none;
@@ -135,7 +135,7 @@
 
   &__bg-img {
     position: absolute;
-    bottom: 20px;
+    bottom: 20rem;
     right: 0;
     pointer-events: none;
     color: var(--c-gray-card);
@@ -146,8 +146,8 @@
     }
 
     @include m.vp--1279 {
-      width: 320px;
-      right: 30px;
+      width: 320rem;
+      right: 30rem;
     }
 
     @include m.vp--1023 {
@@ -158,7 +158,7 @@
     }
 
     @include m.vp--767 {
-      margin-top: 24px;
+      margin-top: 24rem;
       width: 100%;
     }
   }

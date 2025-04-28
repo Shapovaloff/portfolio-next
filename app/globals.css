@@ -80,25 +80,40 @@
   --c-card-portfolio: var(--c-white);
   --border-transparent: var(--c-transparent);
 
-  /* Viewports */
-  --vp--320: 320px;
-  --vp--375: 375px;
-  --vp--768: 768px;
-  --vp--1024: 1024px;
-  --vp--1280: 1280px;
-  --vp--1440: 1440px;
-  --vp--1920: 1920px;
-
   /* Duration */
   --trans--300: 0.3s ease;
   --trans--600: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
   /* Size Element */
-  --border-radius: 12px;
+  --border-radius: 12rem;
 
   /* Box shadow */
-  --bs-card: 0 12px 24px rgba(56, 66, 82, 0.3);
-  --bs-card-portfolio: 0px 0px 14px 3px rgba(56, 66, 82, 0.1);
+  --bs-card: 0 12rem 24rem rgba(56, 66, 82, 0.3);
+  --bs-card-portfolio: 0 0 14rem 3rem rgba(56, 66, 82, 0.1);
+
+  /* rem */
+  --base-font-size: 1px;
+}
+
+@media (max-width: 1919px) {
+  :root {
+    --base-font-size: calc(1vw / 19.19);
+  }
+}
+@media (max-width: 1600px) {
+  :root {
+    --base-font-size: calc(1vw / 14.39);
+  }
+}
+@media (max-width: 1023px) {
+  :root {
+    --base-font-size: calc(1vw / 7.67);
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --base-font-size: calc(1vw / 3.75);
+  }
 }
 
 /* Dark theme - пересмотреть */
@@ -128,6 +143,7 @@ html[data-theme="dark"] {
 
 html {
   box-sizing: border-box;
+  font-size: var(--base-font-size);
 }
 
 html,
@@ -142,7 +158,7 @@ body {
   height: 100%;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 16rem;
   font-family: var(--font-inter), "Arial", sans-serif;
   line-height: 1.4;
   color: var(--text-color);

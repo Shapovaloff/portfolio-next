@@ -2,24 +2,24 @@
 
 .navigation {
   display: flex;
-  margin-right: 120px;
+  margin-right: 120rem;
 
   @include m.vp--1023 {
-    margin-right: 70px;
+    margin-right: 70rem;
   }
 
   @include m.vp--767 {
     position: fixed;
-    top: 64px;
-    height: calc(100vh - 64px);
+    top: 64rem;
+    height: calc(100vh - 64rem);
     background-color: var(--bg-color-footer);
     right: 0;
-    padding: 50px 24px;
+    padding: 50rem 24rem;
     margin-right: 0;
     transform: translateX(101%);
     transition: transform var(--trans--300);
     width: 100%;
-    max-width: 300px;
+    max-width: 300rem;
 
     &.active {
       transform: translateX(0);
@@ -39,12 +39,12 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 32px;
+      margin-right: 32rem;
     }
 
     @include m.vp--1023 {
       &:not(:last-child) {
-        margin-right: 24px;
+        margin-right: 24rem;
       }
     }
 
@@ -59,12 +59,12 @@
   &__link {
     position: relative;
     display: block;
-    padding: 4px 0;
-    font-size: 18px;
+    padding: 4rem 0;
+    font-size: 18rem;
     line-height: 1.5;
     transition: color 0.2s;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1024rem) {
       &:hover {
         color: var(--c-primary-500);
       }
@@ -75,16 +75,16 @@
     }
 
     @include m.vp--767 {
-      padding: 10px 0;
+      padding: 10rem 0;
       width: 100%;
-      border-bottom: 1px solid var(--c-dark-400);
-      font-size: 20px;
+      border-bottom: 1rem solid var(--c-dark-400);
+      font-size: 20rem;
       display: flex;
       align-items: center;
 
       & svg {
         display: block;
-        margin-right: 8px;
+        margin-right: 8rem;
         color: var(--c-primary-500);
       }
     }

@@ -3,8 +3,8 @@
 
 .advantages {
   &__container {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 40rem;
+    padding-bottom: 40rem;
   }
 
   &__heading {
@@ -15,7 +15,7 @@
     @include m.reset-list;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    grid-gap: 30rem;
 
     @include m.vp--1023 {
       grid-template-columns: repeat(2, 1fr);
@@ -30,10 +30,10 @@
     display: flex;
     align-items: flex-start;
     display: grid;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 80rem 1fr;
 
     @include m.vp--767 {
-      grid-template-columns: 70px 1fr;
+      grid-template-columns: 70rem 1fr;
     }
   }
 
@@ -45,10 +45,10 @@
   &__item {
     display: flex;
     align-items: flex-start;
-    gap: 24px;
+    gap: 24rem;
 
     @include m.vp--767 {
-      margin: 8px 0 0;
+      margin: 8rem 0 0;
     }
   }
 
@@ -63,8 +63,8 @@
   }
 
   &__text {
-    margin: 12px 0 0;
-    font-size: 16px;
+    margin: 12rem 0 0;
+    font-size: 16rem;
     line-height: 1.5;
     color: var(--text-color-gray);
   }

@@ -2,17 +2,17 @@
 @use "styles/text-mixins" as t;
 
 .footer {
-  margin-top: 40px;
+  margin-top: 40rem;
   background-color: var(--bg-color-footer);
-  border-top: 2px solid var(--c-border-blue);
+  border-top: 2rem solid var(--c-border-blue);
 
   @include m.vp--767 {
     margin-top: 0;
   }
 
   &__container {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 40rem;
+    padding-bottom: 40rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +28,7 @@
     color: var(--text-color-gray-light);
 
     @include m.vp--767 {
-      margin-top: 16px;
+      margin-top: 16rem;
     }
   }
 }

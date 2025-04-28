@@ -10,14 +10,14 @@
     box-shadow 0.2s;
 
   &__toggle {
-    width: 68px;
-    height: 34px;
+    width: 68rem;
+    height: 34rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid var(--c-primary-500);
+    border: 2rem solid var(--c-primary-500);
     border-radius: var(--border-radius);
-    padding: 4px;
+    padding: 4rem;
     color: var(--c-dark-50);
     cursor: pointer;
     transition: border-color 0.2s;
@@ -25,14 +25,14 @@
     -webkit-tap-highlight-color: transparent;
 
     @include m.vp--767 {
-      width: 60px;
-      height: 30px;
-      padding: 2px;
+      width: 60rem;
+      height: 30rem;
+      padding: 2rem;
     }
 
     & svg {
-      width: 24px;
-      height: 24px;
+      width: 24rem;
+      height: 24rem;
       z-index: 1;
       pointer-events: none;
     }
@@ -44,7 +44,7 @@
       left: 0;
       top: 0;
       height: 100%;
-      width: 36px;
+      width: 36rem;
       background-color: var(--c-primary-500);
       pointer-events: none;
       transition:
@@ -52,20 +52,20 @@
         background-color 0.2s;
 
       @include m.vp--767 {
-        width: 32px;
+        width: 32rem;
       }
     }
   }
 
   & input:checked + .theme-switcher__toggle::after {
-    transform: translateX(32px);
+    transform: translateX(32rem);
 
     @include m.vp--767 {
-      transform: translateX(28px);
+      transform: translateX(28rem);
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1024rem) {
     &:hover {
       .theme-switcher__toggle {
         border-color: var(--c-primary-600);
@@ -80,10 +80,10 @@
 
 [data-theme="dark"] .theme-switcher {
   .theme-switcher__toggle::after {
-    transform: translateX(32px);
+    transform: translateX(32rem);
 
     @include m.vp--767 {
-      transform: translateX(28px);
+      transform: translateX(28rem);
     }
   }
 }

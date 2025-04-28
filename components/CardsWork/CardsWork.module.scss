@@ -3,14 +3,14 @@
 
 .cards-work {
   @include m.reset-list;
-  margin-top: 32px;
+  margin-top: 32rem;
 
   @include m.vp--1023 {
-    margin-top: 24px;
+    margin-top: 24rem;
   }
 
   &__item {
-    min-height: 400px;
+    min-height: 400rem;
     display: flex;
     justify-content: space-between;
     border-radius: var(--border-radius);
@@ -20,11 +20,11 @@
     overflow: hidden;
 
     &:not(:first-child) {
-      margin-top: 32px;
+      margin-top: 32rem;
     }
 
     @include m.vp--1279 {
-      min-height: 320px;
+      min-height: 320rem;
     }
 
     @include m.vp--1023 {
@@ -41,11 +41,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 32px 0 32px 32px;
-    max-width: 454px;
+    padding: 32rem 0 32rem 32rem;
+    max-width: 454rem;
 
     @include m.vp--1023 {
-      padding: 24px;
+      padding: 24rem;
       order: 1;
       display: flex;
       flex-direction: row;
@@ -59,7 +59,7 @@
       padding: 0;
       border-radius: var(--border-radius) var(--border-radius) 0 0;
       width: 100%;
-      padding: 16px;
+      padding: 16rem;
       flex-grow: 1;
       background-color: var(--c-card-portfolio);
     }
@@ -74,12 +74,12 @@
   }
 
   &__description {
-    margin: 16px 0 0;
-    max-width: 340px;
+    margin: 16rem 0 0;
+    max-width: 340rem;
     color: var(--text-color-gray-light);
 
     @include m.vp--767 {
-      margin-top: 24px;
+      margin-top: 24rem;
     }
   }
 
@@ -98,7 +98,7 @@
 
     @include m.vp--767 {
       width: 100%;
-      margin-top: 24px;
+      margin-top: 24rem;
     }
   }
 
@@ -116,16 +116,16 @@
     }
 
     &:not(:last-child) {
-      margin-right: 16px;
+      margin-right: 16rem;
 
       @include m.vp--1279 {
         order: 1;
         margin-right: 0;
-        margin-top: 16px;
+        margin-top: 16rem;
       }
 
       @include m.vp--767 {
-        margin-top: 12px;
+        margin-top: 12rem;
       }
     }
 
@@ -145,10 +145,10 @@
   }
 
   &__img-block {
-    max-width: 700px;
+    max-width: 700rem;
 
     @include m.vp--1279 {
-      max-width: 680px;
+      max-width: 680rem;
     }
 
     & img {
@@ -164,17 +164,17 @@
       overflow: hidden;
       box-shadow: var(--bs-card);
       border-radius: var(--border-radius) var(--border-radius) 0 0;
-      margin: 32px 24px 0;
-      height: 250px;
-      max-width: 340px;
-      width: calc(100% - 48px);
+      margin: 32rem 24rem 0;
+      height: 250rem;
+      max-width: 340rem;
+      width: calc(100% - 48rem);
     }
   }
 
   &.tile {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px 30px;
+    grid-gap: 40rem 30rem;
 
     @include m.vp--1023 {
       grid-template-columns: repeat(2, 1fr);
@@ -190,7 +190,7 @@
         order: 1;
         border-radius: var(--border-radius) var(--border-radius) 0 0;
         width: 100%;
-        padding: 24px;
+        padding: 24rem;
         flex-grow: 1;
         background-color: var(--c-card-portfolio);
 
@@ -200,8 +200,8 @@
       }
 
       &__img-block {
-        margin: 48px 32px 0;
-        height: 300px;
+        margin: 48rem 32rem 0;
+        height: 300rem;
         overflow: hidden;
         box-shadow: var(--bs-card);
         border-radius: var(--border-radius) var(--border-radius) 0 0;
@@ -221,11 +221,11 @@
       }
 
       &__title {
-        font-size: 36px;
+        font-size: 36rem;
         line-height: 1.2;
 
         @include m.vp--767 {
-          font-size: 28px;
+          font-size: 28rem;
         }
       }
 
@@ -234,7 +234,7 @@
       }
 
       &__btn-block {
-        margin-top: 24px;
+        margin-top: 24rem;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -248,12 +248,12 @@
 
         &:not(:first-child) {
           order: 0;
-          margin-bottom: 12px;
+          margin-bottom: 12rem;
 
           color: var(--text-color);
           background-color: rgba(var(--rgb-c-primary-200), 0.3);
 
-          @media (min-width: 1024px) {
+          @media (min-width: 1024rem) {
             &:hover {
               color: var(--color-dark-50);
               background-color: var(--c-primary-500);
