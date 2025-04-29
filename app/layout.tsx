@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Inter from 'next/font/local';
 import './globals.css';
+import ThemeProvider from '@/components/ThemeProvider/ThemeProvider';
 
 const inter = Inter({
   src: [
@@ -18,17 +19,6 @@ export const metadata: Metadata = {
   title: 'Yury Shapovalov - Frontend developer',
   description: 'Frontend developer',
   icons: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '96x96',
-      url: '/favicon/favicon-96x96.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/svg+xml',
-      url: '/favicon/favicon/favicon.svg',
-    },
     {
       rel: 'shortcut icon',
       url: '/favicon/favicon.ico',
@@ -57,7 +47,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable}`}>{children}</body>
+      <body className={`${inter.variable}`}>
+        <ThemeProvider
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

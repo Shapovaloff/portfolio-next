@@ -6,6 +6,16 @@
     position: relative;
     padding-top: 80rem;
     padding-bottom: 80rem;
+
+    @include m.vp--1023 {
+      padding-top: 64rem;
+      padding-bottom: 64rem;
+    }
+
+    @include m.vp--767 {
+      padding-top: 40rem;
+      padding-bottom: 40rem;
+    }
   }
 
   &__title {
@@ -66,16 +76,14 @@
       margin-right: 24rem;
     }
 
-    @media (min-width: 1024rem) {
-      &:hover {
-        & .technologies__img-block {
-          color: var(--c-dark-700);
-          background-color: var(--c-card-hover);
-        }
+    @include m.hover {
+      & .technologies__img-block {
+        color: var(--c-dark-700);
+        background-color: var(--c-card-hover);
+      }
 
-        & .technologies__text {
-          opacity: 1;
-        }
+      & .technologies__text {
+        opacity: 1;
       }
     }
 
@@ -107,7 +115,7 @@
 
       & img,
       & svg {
-        width: size(48rem);
+        width: 48rem;
         display: block;
         height: auto;
       }
@@ -120,7 +128,7 @@
     display: block;
     width: 100%;
     position: absolute;
-    font-size: size(14rem);
+    font-size: 14rem;
     opacity: 0;
     transition: opacity 0.2s;
     pointer-events: none;
@@ -135,10 +143,13 @@
 
   &__bg-img {
     position: absolute;
-    bottom: 20rem;
+    bottom: 24rem;
     right: 0;
+    display: flex;
     pointer-events: none;
     color: var(--c-gray-card);
+    width: 470rem;
+    height: 320rem;
 
     & svg {
       max-width: 100%;
@@ -147,6 +158,7 @@
 
     @include m.vp--1279 {
       width: 320rem;
+      height: 217rem;
       right: 30rem;
     }
 
@@ -160,6 +172,7 @@
     @include m.vp--767 {
       margin-top: 24rem;
       width: 100%;
+      height: auto;
     }
   }
 }

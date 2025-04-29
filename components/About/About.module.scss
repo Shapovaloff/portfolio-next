@@ -11,10 +11,14 @@
 
     @include m.vp--1023 {
       gap: 32rem;
+      padding-top: 64rem;
+      padding-bottom: 64rem;
     }
 
     @include m.vp--767 {
       gap: 24rem;
+      padding-top: 40rem;
+      padding-bottom: 40rem;
     }
   }
 
@@ -53,11 +57,12 @@
 
     @include m.vp--1023 {
       width: 240rem;
+      height: 272rem;
     }
 
     @include m.vp--767 {
-      width: auto;
-      max-width: 100%;
+      width: 245rem;
+      height: 275rem;
     }
 
     & img {
@@ -89,13 +94,11 @@
     }
 
     @include m.vp--767 {
-      position: relative;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 150rem;
-      margin-left: -56rem;
-      margin-bottom: -32rem;
+      width: 123rem;
+      top: 235rem;
+      bottom: auto;
+      right: 15rem;
+      left: auto;
     }
   }
 
@@ -160,15 +163,18 @@
     @include m.vp--767 {
       width: 100%;
       justify-content: center;
-      margin-top: 40rem;
+      margin-top: 24rem;
     }
   }
 
   &__illustration {
     position: absolute;
+    display: flex;
+    width: 255rem;
+    height: 165rem;
     right: 32rem;
     bottom: 32rem;
-    color: var(--color-gray-card);
+    color: var(--c-gray-card);
 
     & svg {
       max-width: 100%;

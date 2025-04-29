@@ -102,12 +102,12 @@
 }
 @media (max-width: 1600px) {
   :root {
-    --base-font-size: calc(1vw / 14.39);
+    --base-font-size: calc(1vw / 14.4);
   }
 }
 @media (max-width: 1023px) {
   :root {
-    --base-font-size: calc(1vw / 7.67);
+    --base-font-size: calc(1vw / 7.68);
   }
 }
 @media (max-width: 767px) {
@@ -130,8 +130,8 @@ html[data-theme="dark"] {
   --c-border-blue: var(--c-dark-700);
   --c-gray-card: var(--c-dark-500);
   --c-card-portfolio: var(--c-dark-700);
-  --c-primary-500: var(--c-dark-50);
-  --c-primary-200: var(--c-dark-500);
+  /* --c-primary-500: var(--c-dark-50);
+  --c-primary-200: var(--c-dark-500); */
   --border-transparent: var(--c-dark-500);
 }
 
@@ -253,13 +253,62 @@ button,
   appearance: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.scroll-lock {
+  position: fixed;
+  overflow: hidden;
+}
+
+.lamp-animate-circle {
+  fill: var(--a-color-gray);
+}
+
+.lamp-animate-path {
+  opacity: 0;
+}
+
+[data-theme="dark"] .lamp-animate-path,
+[data-theme="dark"] .lamp-animate-circle {
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-delay: 0.15s;
+}
+
+[data-theme="dark"] .lamp-animate-circle {
+  fill: var(--a-color-gray);
+  animation-name: animate-lamp;
+}
+
+[data-theme="dark"] .lamp-animate-path {
+  opacity: 0;
+  animation-name: animate-lamp-line;
+}
+
+@keyframes animate-lamp-line {
+  0%,
+  20%,
+  40%,
+  100% {
+    opacity: 1;
   }
 
-  html {
-    color-scheme: dark;
+  10%,
+  30%,
+  80% {
+    opacity: 0;
+  }
+}
+
+@keyframes animate-lamp {
+  0%,
+  20%,
+  40%,
+  100% {
+    fill: var(--a-color-yellow);
+  }
+
+  10%,
+  30%,
+  80% {
+    fill: var(--a-color-gray);
   }
 }

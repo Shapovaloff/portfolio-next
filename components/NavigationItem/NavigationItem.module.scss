@@ -1,0 +1,52 @@
+@use "styles/mixins" as m;
+
+.navigation-item {
+  &:not(:last-child) {
+    margin-right: 32rem;
+  }
+
+  @include m.vp--1023 {
+    &:not(:last-child) {
+      margin-right: 24rem;
+    }
+  }
+
+  @include m.vp--767 {
+    width: 100%;
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 4rem 0;
+    font-size: 18rem;
+    line-height: 1.5;
+    transition: color 0.2s;
+
+    @include m.hover {
+      color: var(--c-primary-500);
+    }
+
+    & svg {
+      display: none;
+    }
+
+    @include m.vp--767 {
+      padding: 10rem 0;
+      width: 100%;
+      border-bottom: 1rem solid var(--c-dark-400);
+      font-size: 20rem;
+      display: flex;
+      align-items: center;
+
+      & svg {
+        display: block;
+        margin-right: 8rem;
+        color: var(--c-primary-500);
+      }
+    }
+  }
+}

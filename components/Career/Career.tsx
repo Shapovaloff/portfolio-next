@@ -9,7 +9,7 @@ import * as Accordion from '@radix-ui/react-accordion';
 
 const Career: FC = () => {
   return (
-    <section className={styles.career}>
+    <section className={styles.career} id={'career'}>
       <Container className={`${styles['career__container']}`}>
         <h2 className={`${styles['career__title']}`}>Опыт</h2>
 
@@ -26,15 +26,17 @@ const Career: FC = () => {
             className={styles['career__list']}
             defaultValue={careerList[0].id}
           >
-            {careerList.map((careerItem, index) => (
+            {careerList.map((careerItem) => (
               <Accordion.Item
                 value={careerItem.id}
                 key={careerItem.id}
                 className={`${styles['career__item']}`}
               >
                 <Accordion.Trigger className={styles['career__heading-btn']}>
-                  <div className={styles['career__icon']}>
-                    <Icon name={careerItem.icon} width={32} height={32} />
+                  <div className={styles['career__icon-block']}>
+                    <span className={styles['career__icon']}>
+                      <Icon name={careerItem.icon} width={32} height={32} />
+                    </span>
                   </div>
                   <h4 className={styles['career__icon-title']}>
                     {careerItem.heading}

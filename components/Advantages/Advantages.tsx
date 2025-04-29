@@ -1,5 +1,7 @@
+import { FC } from 'react';
 import Container from '../Container/Container';
 import styles from './Advantages.module.scss';
+import Image from 'next/image';
 
 const advantagesList = [
   {
@@ -18,7 +20,7 @@ const advantagesList = [
     text: 'Верстка сайта максимально точно совпадающая с макетом пиксель в пиксель',
   },
 ];
-function Advantages() {
+const Advantages: FC = () => {
   return (
     <section className={styles['advantages']}>
       <Container className={styles['advantages__container']}>
@@ -27,7 +29,12 @@ function Advantages() {
           {advantagesList?.map((item) => (
             <li key={item.name} className={styles['advantages__item']}>
               <div className={styles['advantages__img-block']}>
-                <img src={`/advantages/${item.name}.svg`} alt={item.name} />
+                <Image
+                  src={`/advantages/${item.name}.svg`}
+                  width={80}
+                  height={86}
+                  alt={item.name}
+                />
               </div>
               <div className={styles['advantages__content']}>
                 <h3 className={styles['advantages__title']}>{item.title}</h3>
@@ -39,6 +46,6 @@ function Advantages() {
       </Container>
     </section>
   );
-}
+};
 
 export default Advantages;

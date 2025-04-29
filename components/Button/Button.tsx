@@ -1,15 +1,15 @@
-import React, { JSX } from 'react';
+import { FC } from 'react';
 import { ButtonProps, LinkProps } from './Button.interface';
 import styles from './Button.module.scss';
 
-function Button({
+const Button: FC<ButtonProps | LinkProps> = ({
   children,
   className = '',
   type = 'button',
   variant = 'default',
   href = '',
   ...props
-}: ButtonProps | LinkProps): JSX.Element {
+}) => {
   const baseClasses = `${styles['button']} ${styles[variant]} ${className}`;
 
   if (type === 'link' || href) {
@@ -27,6 +27,6 @@ function Button({
       {children}
     </button>
   );
-}
+};
 
 export default Button;

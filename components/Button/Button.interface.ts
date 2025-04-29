@@ -6,8 +6,7 @@ type ButtonVariant =
   | 'primary'
   | 'transparent'
   | 'primary-100 '
-  | 'opacity'
-  | 'no-bg';
+  | 'opacity';
 
 export interface ButtonBase {
   children: ReactNode;

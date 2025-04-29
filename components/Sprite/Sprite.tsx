@@ -1,7 +1,7 @@
-import React from 'react';
+import { FC } from 'react';
 import styles from './Sprite.module.scss';
 
-function Sprite() {
+const Sprite: FC = () => {
   return (
     <div className={styles['sprite']}>
       <svg xmlns="http://www.w3.org/2000/svg">
@@ -1033,7 +1033,7 @@ function Sprite() {
                   fill="#374151"
                 ></path>
                 <circle
-                  className="promo__animate promo__animate--circle"
+                  className="lamp-animate-circle"
                   cx="382"
                   cy="82"
                   r="7"
@@ -1048,7 +1048,7 @@ function Sprite() {
                   fill="#374151"
                 ></path>
                 <path
-                  className="promo__animate promo__animate--path"
+                  className="lamp-animate-path"
                   d="M356.386 97.4138L407.329 68.0017L501.5 157.5L374.5 157.5L356.386 97.4138Z"
                   fill="url(#paint0_linear)"
                 ></path>
@@ -1466,6 +1466,6 @@ function Sprite() {
       </svg>
     </div>
   );
-}
+};
 
 export default Sprite;

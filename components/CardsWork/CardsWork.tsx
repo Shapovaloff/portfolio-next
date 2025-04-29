@@ -1,11 +1,15 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, FC } from 'react';
 import Button from '../Button/Button';
 import { CardsWorkProps } from './CardsWork.interface';
 import styles from './CardsWork.module.scss';
 import { WorkItem } from '../LastWorks/data';
 import Icon from '../Icon/Icon';
 
-function CardsWork({ worksList, layoutMode, visibleCards }: CardsWorkProps) {
+const CardsWork: FC<CardsWorkProps> = ({
+  worksList,
+  layoutMode,
+  visibleCards,
+}) => {
   return (
     <ul className={`${styles['cards-work']} ${styles[layoutMode] || ''}`}>
       {worksList?.slice(0, visibleCards).map((work: WorkItem) => (
@@ -31,6 +35,7 @@ function CardsWork({ worksList, layoutMode, visibleCards }: CardsWorkProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="primary"
+                  className={styles['cards-work__link']}
                 >
                   <span>
                     {work.linkSite ? 'Перейти на сайт' : 'Читать кейс'}
@@ -38,7 +43,7 @@ function CardsWork({ worksList, layoutMode, visibleCards }: CardsWorkProps) {
                   <Icon name="icon-arrow-right-top" />
                 </Button>
               ) : (
-                <Button disabled>
+                <Button disabled className={styles['cards-work__link']}>
                   <span>Проект в разработке</span>
                   <Icon name="icon-arrow-right-top" />
                 </Button>
@@ -68,6 +73,6 @@ function CardsWork({ worksList, layoutMode, visibleCards }: CardsWorkProps) {
       ))}
     </ul>
   );
-}
+};
 
 export default CardsWork;

@@ -1,8 +1,10 @@
+import { FC } from 'react';
 import Button from '../Button/Button';
 import Container from '../Container/Container';
 import styles from './About.module.scss';
 import Icon from '../Icon/Icon';
 import experienceCount from '@/utils/experience-count';
+import Image from 'next/image';
 
 const aboutList = [
   {
@@ -17,25 +19,31 @@ const aboutList = [
   { text: 'Опыт управления небольшой командой разработчиков' },
 ];
 
-function About() {
+const About: FC = () => {
   const experience = `Опыт ${experienceCount()}`;
 
   return (
-    <section className={styles['about']}>
+    <section className={styles['about']} id={'about'}>
       <Container className={styles['about__container']}>
         <h2 className={styles['about__title']}>Обо мне</h2>
         <div className={styles['about__wrapper']}>
           <div className={styles['about__photo-block']}>
             <picture>
-              <img
+              <Image
                 src="/about/about-photo@1x.jpg"
-                srcSet="about/about-photo@2x.jpg 2x"
+                width={212}
+                height={240}
                 alt="Yury Shapovalov"
               />
             </picture>
           </div>
           <div className={styles['about__points']}>
-            <img src="about/points.svg" width="145" height="106" alt="points" />
+            <Image
+              src="about/points.svg"
+              width="145"
+              height="106"
+              alt="points"
+            />
           </div>
           <div className={styles['about__info']}>
             <h3 className={styles['about__info-title']}>
@@ -66,6 +74,6 @@ function About() {
       </Container>
     </section>
   );
-}
+};
 
 export default About;

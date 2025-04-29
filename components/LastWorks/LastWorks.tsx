@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import Button from '../Button/Button';
 import Container from '../Container/Container';
 import Icon from '../Icon/Icon';
@@ -14,7 +14,7 @@ import {
 import CardsWork from '../CardsWork/CardsWork';
 import CustomSelect from '../CustomSelect/CustomSelect';
 
-function LastWorks() {
+const LastWorks: FC = () => {
   const [layoutMode, setLayoutMode] = useState<layoutModeType>('compact');
   const [visibleCards, setVisibleCards] = useState<number>(3);
   const [filterCategory, setFilterCategory] = useState<string>('all');
@@ -39,7 +39,7 @@ function LastWorks() {
   const showMoreButton = visibleCards < filteredWorks.length;
 
   return (
-    <section className={styles['last-works']}>
+    <section className={styles['last-works']} id={'last-works'}>
       <Container className={styles['last-works__container']}>
         <h2 className={styles['last-works__title']}>Проекты</h2>
         <div className={styles['last-works__nav']}>
@@ -84,6 +84,6 @@ function LastWorks() {
       </Container>
     </section>
   );
-}
+};
 
 export default LastWorks;

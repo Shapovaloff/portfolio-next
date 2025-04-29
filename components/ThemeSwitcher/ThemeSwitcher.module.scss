@@ -20,7 +20,7 @@
     padding: 4rem;
     color: var(--c-dark-50);
     cursor: pointer;
-    transition: border-color 0.2s;
+    transition: border-color var(--trans--300);
     -webkit-tap-highlight-color: var(--c-transparent);
     -webkit-tap-highlight-color: transparent;
 
@@ -36,54 +36,55 @@
       z-index: 1;
       pointer-events: none;
     }
-
-    &::after {
-      content: "";
-      position: absolute;
-      border-radius: var(--border-radius);
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 36rem;
-      background-color: var(--c-primary-500);
-      pointer-events: none;
-      transition:
-        transform 0.3s,
-        background-color 0.2s;
-
-      @include m.vp--767 {
-        width: 32rem;
-      }
-    }
   }
 
-  & input:checked + .theme-switcher__toggle::after {
-    transform: translateX(32rem);
+  &__bg {
+    position: absolute;
+    border-radius: var(--border-radius);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 36rem;
+    background-color: var(--c-primary-500);
+    pointer-events: none;
+    animation: bgLight var(--trans--300);
 
     @include m.vp--767 {
-      transform: translateX(28rem);
+      width: 32rem;
     }
   }
 
-  @media (min-width: 1024rem) {
-    &:hover {
-      .theme-switcher__toggle {
+  @include m.hover {
+    & .theme-switcher {
+      &__toggle {
         border-color: var(--c-primary-600);
+      }
 
-        &::after {
-          background-color: var(--c-primary-600);
-        }
+      &__bg {
+        background-color: var(--c-primary-600);
       }
     }
   }
 }
 
-[data-theme="dark"] .theme-switcher {
-  .theme-switcher__toggle::after {
-    transform: translateX(32rem);
+[data-theme="dark"] .theme-switcher__bg {
+  animation: bgDark var(--trans--300) forwards;
+}
 
-    @include m.vp--767 {
-      transform: translateX(28rem);
-    }
+@keyframes bgDark {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100% - 4rem));
+  }
+}
+
+@keyframes bgLight {
+  from {
+    transform: translateX(calc(100% - 4rem));
+  }
+  to {
+    transform: translateX(0);
   }
 }

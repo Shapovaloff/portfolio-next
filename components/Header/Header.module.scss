@@ -1,6 +1,25 @@
 @use "styles/mixins" as m;
 @use "styles/text-mixins" as t;
 
+.overlay {
+  position: fixed;
+  display: block;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0;
+  background-color: rgba(#ffffff, 0.3);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+  transition: opacity var(--trans--300);
+
+  &.active {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -78,7 +97,7 @@
       display: block;
       background-color: var(--c-primary-500);
       margin-bottom: 7rem;
-      transition: 0.2s;
+      transition: var(--trans--300);
 
       &:last-child {
         margin-bottom: 0;

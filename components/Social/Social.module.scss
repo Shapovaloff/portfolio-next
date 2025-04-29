@@ -27,47 +27,26 @@
       height: 24rem;
     }
 
-    @media (min-width: 1024rem) {
+    @include m.hover {
       --icon-bg-color: var(--c-dark-400);
-
-      &:hover {
-        &:hover {
-          color: var(--c-white);
-          background: var(--icon-bg-color);
-        }
-      }
+      color: var(--c-white);
+      background: var(--icon-bg-color);
     }
   }
 }
 
-// Todo
-// [data-theme="dark"] .social {
-//   &__link {
-//     border-color: transparent;
-//     background-color: $color-dark-700;
+[data-theme="dark"] .social {
+  &__link {
+    border-color: transparent;
+    background-color: var(--c-dark-700);
 
-//     @media (min-width: 1024rem) {
-//       &:hover {
-//         background: $color-white;
-//       }
-//       &--tg:hover {
-//         color: $tg;
-//       }
-//       &--fb:hover {
-//         color: $fb;
-//       }
-//       &--inst:hover {
-//         color: $inst;
-//       }
-//       &--inst:hover path {
-//         fill: url(#paint0_radial);
-//       }
-//       &--vk:hover {
-//         color: $vk;
-//       }
-//       &--github:hover {
-//         color: $github;
-//       }
-//     }
-//   }
-// }
+    @include m.hover {
+      background: var(--c-white);
+      color: var(--icon-bg-color);
+
+      & path {
+        fill: url(#paint0_radial);
+      }
+    }
+  }
+}

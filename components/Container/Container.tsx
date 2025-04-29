@@ -1,11 +1,11 @@
-import React, { JSX } from 'react';
+import React, { FC } from 'react';
 import { ContainerProps } from './Container.interface';
 import styles from './Container.module.scss';
 
-function Container({ children, className }: ContainerProps): JSX.Element {
+const Container: FC<ContainerProps> = ({ children, className }) => {
   return (
     <div className={`${styles['container']} ${className}`}>{children}</div>
   );
-}
+};
 
 export default Container;

@@ -7,6 +7,16 @@
     padding-bottom: 80rem;
     display: flex;
     flex-direction: column;
+
+    @include m.vp--1023 {
+      padding-top: 64rem;
+      padding-bottom: 64rem;
+    }
+
+    @include m.vp--767 {
+      padding-top: 40rem;
+      padding-bottom: 40rem;
+    }
   }
 
   &__title {
@@ -53,10 +63,8 @@
       border-radius: 8rem;
     }
 
-    @media (min-width: 1024rem) {
-      &:hover {
-        color: var(--c-primary-500);
-      }
+    @include m.hover {
+      color: var(--c-primary-500);
     }
   }
 

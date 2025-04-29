@@ -5,6 +5,16 @@
   &__container {
     padding-top: 80rem;
     padding-bottom: 80rem;
+
+    @include m.vp--1023 {
+      padding-top: 64rem;
+      padding-bottom: 64rem;
+    }
+
+    @include m.vp--767 {
+      padding-top: 40rem;
+      padding-bottom: 40rem;
+    }
   }
 
   &__title {
@@ -108,7 +118,7 @@
     }
 
     &[data-state="open"] {
-      & .career__icon {
+      & .career__icon-block {
         transform: scale(1.4);
         color: var(--c-dark-50);
         border-color: var(--c-primary-500);
@@ -132,20 +142,19 @@
     }
 
     p {
-      margin: 0 0;
+      margin: 0;
       color: var(--text-color-gray);
+      line-height: 1.15;
     }
 
-    @media (min-width: 1024rem) {
-      &:hover {
-        & .career__icon {
-          border-color: var(--c-primary-500);
-        }
+    @include m.hover {
+      & .career__icon {
+        border-color: var(--c-primary-500);
       }
     }
   }
 
-  &__icon {
+  &__icon-block {
     position: absolute;
     display: flex;
     align-items: center;
@@ -166,6 +175,19 @@
       top: 24rem;
       width: 60rem;
       height: 60rem;
+    }
+  }
+
+  &__icon {
+    width: 32rem;
+    height: 32rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include m.vp--767 {
+      width: 24rem;
+      height: 24rem;
     }
   }
 
@@ -190,6 +212,8 @@
 
     & p {
       margin: 0;
+      font-size: 16rem;
+      line-height: 1.4;
     }
 
     @include m.vp--767 {

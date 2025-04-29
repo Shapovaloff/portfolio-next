@@ -3,10 +3,11 @@ import styles from './Technologies.module.scss';
 import { techBlocks } from './data';
 import Container from '../Container/Container';
 import { FC } from 'react';
+import Image from 'next/image';
 
 const Technologies: FC = () => {
   return (
-    <section id="technologies" className={styles.technologies}>
+    <section className={styles.technologies} id={'technologies'}>
       <Container className={`${styles['technologies__container']}`}>
         <h2 className={`${styles['technologies__title']}`}>Технологии</h2>
 
@@ -24,10 +25,12 @@ const Technologies: FC = () => {
                   <li key={itemIndex} className={styles['technologies__item']}>
                     <div className={styles['technologies__img-block']}>
                       {tech.nameSrc ? (
-                        <img
+                        <Image
                           src={`/technologies/${techBlock.nameBlock}/${tech.nameSrc}.svg`}
                           alt={tech.text}
                           className={styles['technologies__img']}
+                          width={470}
+                          height={320}
                         />
                       ) : tech.nameSvg ? (
                         <Icon name={tech.nameSvg} width={56} height={56} />

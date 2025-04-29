@@ -1,8 +1,8 @@
-import { JSX } from 'react';
+import { FC } from 'react';
 import styles from './Icon.module.scss';
 import { IconProps } from './Icon.interface';
 
-function Icon({ name, width = 24, height = 24 }: IconProps): JSX.Element {
+const Icon: FC<IconProps> = ({ name, width = 24, height = 24 }) => {
   return (
     <svg
       className={styles['icon']}
@@ -13,6 +13,6 @@ function Icon({ name, width = 24, height = 24 }: IconProps): JSX.Element {
       <use xlinkHref={`#${name}`} />
     </svg>
   );
-}
+};
 
 export default Icon;

@@ -77,14 +77,11 @@
     margin: 16rem 0 0;
     max-width: 340rem;
     color: var(--text-color-gray-light);
-
-    @include m.vp--767 {
-      margin-top: 24rem;
-    }
   }
 
   &__btn-block {
     margin-top: auto;
+    flex-shrink: 0;
 
     @include m.vp--1279 {
       display: flex;
@@ -98,40 +95,13 @@
 
     @include m.vp--767 {
       width: 100%;
-      margin-top: 24rem;
+      margin-top: 40rem;
     }
   }
 
   &__link {
-    // todo
-    &.disabled {
-      cursor: default;
-      color: var(--c-dark-50);
-      background-color: var(--c-dark-400);
-    }
-
-    &.disabled:hover {
-      color: var(--c-dark-50);
-      background-color: var(--c-dark-400);
-    }
-
-    &:not(:last-child) {
-      margin-right: 16rem;
-
-      @include m.vp--1279 {
-        order: 1;
-        margin-right: 0;
-        margin-top: 16rem;
-      }
-
-      @include m.vp--767 {
-        margin-top: 12rem;
-      }
-    }
-
     @include m.vp--767 {
       width: 100%;
-      justify-content: center;
     }
   }
 
@@ -253,11 +223,9 @@
           color: var(--text-color);
           background-color: rgba(var(--rgb-c-primary-200), 0.3);
 
-          @media (min-width: 1024rem) {
-            &:hover {
-              color: var(--color-dark-50);
-              background-color: var(--c-primary-500);
-            }
+          @include m.hover {
+            color: var(--color-dark-50);
+            background-color: var(--c-primary-500);
           }
         }
 
@@ -271,6 +239,6 @@
   }
 }
 
-// [data-theme="dark"] .cards-work .cards-work__item {
-//   background-color: var(--c-dark-800);
-// }
+[data-theme="dark"] .cards-work .cards-work__item {
+  background-color: var(--c-dark-800);
+}

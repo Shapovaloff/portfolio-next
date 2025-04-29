@@ -27,10 +27,8 @@
   &.transparent {
     padding: 0;
 
-    @media (min-width: 1024rem) {
-      &:hover {
-        color: var(--c-primary-500);
-      }
+    @include m.hover {
+      color: var(--c-primary-500);
     }
   }
 
@@ -38,10 +36,8 @@
     color: var(--c-dark-50);
     background-color: var(--c-primary-500);
 
-    @media (min-width: 1024rem) {
-      &:hover {
-        background-color: var(--c-primary-600);
-      }
+    @include m.hover {
+      background-color: var(--c-primary-600);
     }
   }
 
@@ -50,11 +46,9 @@
     color: var(--c-primary-500);
     background-color: var(--c-border-blue);
 
-    @media (min-width: 1024rem) {
-      &:hover {
-        color: var(--c-dark-50);
-        background-color: var(--c-primary-500);
-      }
+    @include m.hover {
+      color: var(--c-dark-50);
+      background-color: var(--c-primary-500);
     }
   }
 
@@ -67,16 +61,9 @@
     //   color: var(--c-primary-500);
     // }
 
-    @media (min-width: 1024rem) {
-      &:hover {
-        color: var(--c-dark-50);
-        background-color: var(--c-primary-500);
-      }
+    @include m.hover {
+      color: var(--c-dark-50);
+      background-color: var(--c-primary-500);
     }
-  }
-
-  &.no-bg {
-    color: var(--text-color);
-    background-color: var(--c-rgb-primary-200-03);
   }
 }

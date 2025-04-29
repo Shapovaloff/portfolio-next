@@ -1,10 +1,15 @@
-import React from 'react';
+'use client';
+
+import React, { FC } from 'react';
 import styles from './Promo.module.scss';
 import Container from '../Container/Container';
 import Icon from '../Icon/Icon';
 import Button from '../Button/Button';
+import useScrollTo from '@/hooks/useScrollTo';
 
-function Promo() {
+const Promo: FC = () => {
+  const scroll = useScrollTo('last-works', { offset: 40 });
+
   return (
     <section className={styles['promo']}>
       <Container className={styles['promo__container']}>
@@ -17,13 +22,17 @@ function Promo() {
         <div className={styles['promo__img-block']}>
           <Icon name="icon-promo-hello" width={770} height={390} />
         </div>
-        <Button type="link" href="#last-works" variant="primary">
+        <Button
+          variant="primary"
+          onClick={scroll}
+          className={styles['promo__button']}
+        >
           <span>Проекты</span>
           <Icon name="icon-arrow-down" />
         </Button>
       </Container>
     </section>
   );
-}
+};
 
 export default Promo;
