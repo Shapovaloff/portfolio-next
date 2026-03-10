@@ -1,6 +1,7 @@
 export interface TechItem {
   nameSvg?: string;
   nameSrc?: string;
+  ext?: 'svg' | 'png' | 'webp';
   text: string;
 }
 

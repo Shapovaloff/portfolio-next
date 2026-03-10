@@ -26,7 +26,7 @@ const Technologies: FC = () => {
                     <div className={styles['technologies__img-block']}>
                       {tech.nameSrc ? (
                         <Image
-                          src={`/technologies/${techBlock.nameBlock}/${tech.nameSrc}.svg`}
+                          src={`/technologies/${techBlock.nameBlock}/${tech.nameSrc}.${tech.ext ?? 'svg'}`}
                           alt={tech.text}
                           className={styles['technologies__img']}
                           width={470}

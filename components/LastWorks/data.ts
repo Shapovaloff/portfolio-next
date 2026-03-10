@@ -7,12 +7,11 @@ export interface WorkItem {
   linkCase?: string;
 }
 
-export const filterOptions = [
-  { value: 'all', label: 'Все' },
-  { value: 'real', label: 'Реальные' },
-  { value: 'educational', label: 'Учебные' },
-  // { value: 'react', label: 'React' },
-];
+// export const filterOptions = [
+//   { value: 'all', label: 'Все' },
+//   { value: 'educational', label: 'Учебные' },
+//   { value: 'react', label: 'React' },
+// ];
 
 export const btnLayoutModeType = ['compact', 'tile'] as const;
 export type layoutModeType = (typeof btnLayoutModeType)[number];
@@ -82,29 +81,29 @@ export const worksList: WorkItem[] = [
   //   linkSite: 'https://next-pizza-red-gamma.vercel.app/',
   //   name: 'next-pizza',
   // },
-  {
-    category: 'educational',
-    title: 'Israel',
-    description:
-      'Учебный проект практического курса "Акселератор" от\u00A0HTML Academy',
-    linkSite: 'https://shapovaloff.github.io/israel/build/',
-    name: 'israel',
-  },
-  {
-    category: 'educational',
-    title: 'Escape room',
-    description:
-      'Учебный проект практического курса "Акселератор" от\u00A0HTML Academy',
-    linkSite: 'https://shapovaloff.github.io/escape-room/build/main.html',
-    name: 'escape-room',
-  },
-  {
-    category: 'educational',
-    title: 'Cat energy',
-    description:
-      'Учебный проект онлайн‑курсa HTML\u00A0и\u00A0CSS "Адаптивная вёрстка и\u00A0автоматизация" от\u00A0HTML Academy',
-    linkSite:
-      'https://shapovaloff.github.io/1374325-cat-energy-19/build/index.html',
-    name: 'cat-energy',
-  },
+  // {
+  //   category: 'educational',
+  //   title: 'Israel',
+  //   description:
+  //     'Учебный проект практического курса "Акселератор" от\u00A0HTML Academy',
+  //   linkSite: 'https://shapovaloff.github.io/israel/build/',
+  //   name: 'israel',
+  // },
+  // {
+  //   category: 'educational',
+  //   title: 'Escape room',
+  //   description:
+  //     'Учебный проект практического курса "Акселератор" от\u00A0HTML Academy',
+  //   linkSite: 'https://shapovaloff.github.io/escape-room/build/main.html',
+  //   name: 'escape-room',
+  // },
+  // {
+  //   category: 'educational',
+  //   title: 'Cat energy',
+  //   description:
+  //     'Учебный проект онлайн‑курсa HTML\u00A0и\u00A0CSS "Адаптивная вёрстка и\u00A0автоматизация" от\u00A0HTML Academy',
+  //   linkSite:
+  //     'https://shapovaloff.github.io/1374325-cat-energy-19/build/index.html',
+  //   name: 'cat-energy',
+  // },
 ];

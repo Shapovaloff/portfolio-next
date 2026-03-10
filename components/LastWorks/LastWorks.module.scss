@@ -42,6 +42,7 @@
   &__card-view {
     display: flex;
     align-items: center;
+    margin-left: auto;
 
     @include m.vp--767 {
       display: none;
